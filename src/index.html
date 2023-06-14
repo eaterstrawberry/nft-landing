@@ -1,0 +1,57 @@
+@@include('html/head.html', {
+"title": "Главная"
+})
+<main class="page">
+	<section class="page__first first">
+		@@include('html/header.html', {})
+		<div class="first__container">
+			<div class="first__main main-first">
+				<div class="main-first__content content-main-first">
+						<h1 class="content-main-first__title">Explore, Buy and Sell the <span>Best NFTs!</span></h1>
+					<div class="content-main-first__buttons">
+						<button class="content-main-first__btn_yellow">Explore</button>
+						<button class="content-main-first__btn">Create</button>
+					</div>
+					<div class="content-main-first__items">
+						<div class="content-main-first__item item-main-content">
+							<p class="item-main-content__subtitle">32k+</p>
+							Artworks
+						</div>
+						<div class="content-main-first__item item-main-content">
+							<p class="item-main-content__subtitle">20k+</p>
+							Auctions
+						</div>
+						<div class="content-main-first__item item-main-content">
+							<p class="item-main-content__subtitle">12k+</p>
+							Creators
+						</div>
+					</div>
+				</div>
+				<div class="first__nft nft-first">
+					<div class="nft-first__header header-nft"> 
+						<div class="header-nft__content content-header-nft">
+							<p class="content-header-nft__text">Current bid</p>
+							<p class="content-header-nft__subtitle">0.99 ETH</p>
+						</div>
+						<div class="header-nft__content content-header-nft">
+							<p class="content-header-nft__text">Ends in</p>
+							<p class="content-header-nft__subtitle">25 hrs</p>
+						</div>
+					</div>
+
+					<div class="nft-first__footer footer-nft">
+						<div class="footer-nft__content content-footer-nft">
+							<p class="content-footer-nft__subtitle">Artist</p>
+							<p class="content-footer-nft__nick">@wzard</p>
+						</div>
+						<button class="footer-nft__btn">Start Bid</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="first__arrow-btn">
+			<img src="img/icons/icons.svg#arrow-down" alt="Arrow">
+		</button>
+	</section>
+</main>
+@@include('html/footer.html', {})

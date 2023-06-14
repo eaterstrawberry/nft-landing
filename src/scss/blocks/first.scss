@@ -1,0 +1,183 @@
+.first {
+	padding: 37px 0px 0px 0px;
+	min-height: 100%;
+	position: relative;
+	.first__container {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.main-first {
+	display: flex;
+	justify-content: space-between;
+}
+
+.content-main-first {
+	max-width: 700px;
+}
+
+.content-main-first__title {
+	font-family: 'Oxanium';
+	font-weight: 700;
+	font-size: 85px;
+	line-height: 153%;
+	span {
+		color: $yellow;
+	}
+}
+
+.content-main-first__buttons {
+	display: flex;
+	align-items: center;
+	gap: 48px;
+	margin: 77px 0px 120px 0px;
+}
+
+.content-main-first__btn {
+	background: rgba(233, 215, 167, 0.1);
+	color: $white;
+	&:hover {
+		background: $yellow;
+		color: $black2;
+	}
+}
+.content-main-first__btn,
+.content-main-first__btn_yellow {
+	padding: 24px 76px;
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 128%;
+	border: 1px solid $yellow;
+}
+
+.content-main-first__btn_yellow {
+	background: $yellow;
+	color: $black2;
+	&:hover {
+		background: rgba(233, 215, 167, 0.1);
+		color: $white;
+	}
+}
+
+.content-main-first__items {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.item-main-content {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 146%;
+	color: $gray;
+	p {
+	font-family: 'Oxanium';
+	font-weight: 700;
+	font-size: 62px;
+	line-height: 126%;
+	color: $white2;
+	}
+}
+
+.header-nft {
+	background: linear-gradient(92.8deg, rgba(255, 137, 61, 0.09) -52.37%, rgba(250, 250, 250, 0.9) 137.41%);
+	opacity: 0.95;
+	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.12);
+	backdrop-filter: blur(22.5px);
+	padding: 18px 35px;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.first__nft {
+	background: url('../img/nft-item.jpg');
+	max-width: 550px;
+	width: 100%;
+	height: 720px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 25px 0px 0px 0px;
+}
+
+.content-header-nft__text {
+	font-family: 'Oxanium';
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 122%;
+	letter-spacing: 0.08em;
+	text-transform: capitalize;
+	color: #E4DEE7;
+}
+
+.content-header-nft__subtitle {
+	font-family: 'Oxanium';
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 125%;
+	color: $white;
+	padding-top: 7px;
+}
+
+.footer-nft {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $white;
+	padding: 35px 50px;
+}
+
+.footer-nft__btn {
+	background: $yellow;
+	backdrop-filter: blur(22.5px);
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 116%;
+	color: $black2;
+	padding: 23px 44px;
+	&:hover {
+		color: $white;
+		background: rgba(233, 115, 51, 0.924);
+	}
+}
+
+.content-footer-nft__subtitle {
+	font-family: 'Oxanium';
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 125%;
+	letter-spacing: 0.07em;
+	color: $black3;
+}
+
+.content-footer-nft__nick {
+	font-size: 24px;
+	line-height: 35px;
+	color: $gray2;
+}
+
+.first__arrow-btn {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%) translateY(100%);
+
+	background: rgba(109, 91, 114, 0.4);
+	box-shadow: 0px 14px 79px rgba(134, 19, 165, 0.1);
+	backdrop-filter: blur(20px);
+	border-radius: 50%;
+	width: 156px;
+	height: 156px;
+	
+	
+	img {
+		width: 20px;
+	}
+}

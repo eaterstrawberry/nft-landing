@@ -1,0 +1,73 @@
+body {
+  overflow-x: hidden;
+  position: relative;
+  color: $white2;
+  @include font('Work Sans', 400);
+  background: $black;
+
+  &.active-body {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 36px;
+}
+
+a,
+button {
+  color: $white2;
+}
+
+/*.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}*/
+
+/*=======================*/
+.title {
+	font-weight: 700;
+   font-size: 64px;
+   line-height: 200%;
+}
+.title_center {
+	text-align: center;
+}
+@media (max-width: 767.98px){
+	.title {
+		font-size: 30px;
+	}
+}
+/*=======================*/
+.page {
+	flex: 1 1 auto;
+}
+
+[class*="__container"]{
+	max-width: 1390px;
+  	width: 100%;
+  	padding: 0 15px;
+  	margin: 0 auto;
+}
+@media(max-width:1199.98px){
+	[class*="__container"]{
+		max-width: 970px;
+	}
+}
+@media(max-width:991.98px){
+	[class*="__container"]{
+		max-width: 750px;
+	}
+}
+@media(max-width:767.98px){
+	[class*="__container"]{
+		max-width: none;
+	}
+}
