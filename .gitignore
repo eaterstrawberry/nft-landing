@@ -1,3 +1,4 @@
-no_modules/
+node_modules/
 dist/
 package-lock.json
+.DS_Store
