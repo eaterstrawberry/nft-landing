@@ -4,6 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "type": "module",
+  "homepage": "https://eaterstrawberry.github.io/nft-landing",
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
@@ -17,6 +18,7 @@
     "aos": "^2.3.4",
     "browser-sync": "latest",
     "del": "latest",
+    "gh-pages": "^5.0.0",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-clean-css": "latest",

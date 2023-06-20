@@ -687,6 +687,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 /*--------------*/
 body {
   overflow-x: hidden;
@@ -722,13 +727,33 @@ button {
 }*/
 /*=======================*/
 .title {
+  font-family: "Oxanium";
   font-weight: 700;
   font-size: 64px;
   line-height: 200%;
+  color: #F5FBF2;
+  position: relative;
+}
+.title:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-35%);
+  background: #8613A5;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+.title span {
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-.title_center {
-  text-align: center;
+.title-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 767.98px) {
@@ -979,16 +1004,22 @@ button {
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 50%;
+  top: 0;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 54px;
+  height: 54px;
   z-index: 10;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  transform: scale(5);
+}
+.swiper-button-prev img,
+.swiper-button-next img {
+  width: 54px;
+  height: 54px;
 }
 @media (max-width: 600px) {
   .swiper-button-prev,
@@ -1026,7 +1057,11 @@ button {
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: 20px;
+  right: 50px;
+}
+.swiper-button-prev img,
+.swiper-rtl .swiper-button-next img {
+  transform: rotate(180deg);
 }
 @media (max-width: 1400px) {
   .swiper-button-prev,
@@ -1137,7 +1172,7 @@ button {
   transform: translate(-50%, -50%);
   width: 22px;
   height: 22px;
-  border: 1px solid #531FB5;
+  border: 1px solid #8613A5;
   display: none;
   border-radius: 50%;
 }
@@ -1156,7 +1191,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #531FB5;
+  background-color: #8613A5;
 }
 .swiper-pagination-bullet-active:after {
   display: block;
@@ -2714,6 +2749,139 @@ button.swiper-pagination-bullet {
   width: 156px;
   height: 156px;
 }
-.first__arrow-btn img {
-  width: 20px;
+.companies__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.companies__main img {
+  width: 18%;
+}
+
+.companies {
+  margin: 250px 0px 185px 0px;
+}
+
+/*.auctions-slider {
+	flex: 0 1 50%;
+	min-width: 0;
+}*/
+.auctions-slider {
+  margin-top: 116px;
+}
+
+.auctions__img {
+  position: relative;
+}
+.auctions__img img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.auctions__img div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(125.33deg, #8613A5 18.61%, rgba(250, 250, 250, 0.65) 137.4%);
+  opacity: 0.95;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(22.5px);
+  border-radius: 0px;
+  padding: 15px 45px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 146%;
+  letter-spacing: 0.02em;
+}
+
+.auctions__item {
+  background: #3D2942;
+  padding: 32px;
+}
+
+.profile-auctions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 28px 0;
+}
+
+.info-profile {
+  display: flex;
+  align-items: center;
+}
+.info-profile img {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 16px;
+}
+
+.profile-item__likes {
+  display: flex;
+  align-items: center;
+}
+.profile-item__likes img {
+  width: 25px;
+  transform: scale(5);
+}
+.profile-item__likes span {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 109%;
+  color: #76607A;
+  margin-left: 9px;
+}
+
+.content-profile__subtitle {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 125%;
+  color: #F5FBF2;
+}
+
+.content-profile__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+  color: #BDAAC1;
+}
+
+.item-auctions__bid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bid__subtitle {
+  font-size: 24px;
+  line-height: 146%;
+  color: #C6BFC8;
+}
+
+.bid__price {
+  font-family: "Oxanium";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 146%;
+}
+
+.item-auctions__btn {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 146%;
+  letter-spacing: 0.05em;
+  color: #fff;
+  padding: 21px 0;
+  background: rgba(233, 215, 167, 0.1);
+  border: 1px solid #FDE8B3;
+  width: 100%;
+  margin-top: 40px;
+}
+.item-auctions__btn:hover {
+  background: #FFCE4E;
+  color: #000000;
 }

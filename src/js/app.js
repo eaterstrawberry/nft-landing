@@ -14,3 +14,16 @@ import {
 import AOS from 'aos';
 
 flsFunctions.isWebp();
+
+const swiper = new Swiper('.auctions-slider', {
+	loop: true, // Включить бесконечный режим
+	navigation: {
+		nextEl: '.swiper-button-next_1',
+		prevEl: '.swiper-button-prev_1' // Включить стрелочки
+	},
+	modules: [Navigation], // Модули, которые будут использоваться
+	autoHeight: true, // Автовысота
+	speed: 500, // Скорость прокрутки слайдера
+	slidesPerView: 3, // Количество слайдов, которые будут видны
+	spaceBetween: 42,
+});
