@@ -24,12 +24,19 @@ button {
   color: $white2;
 }
 
-/*.wrapper {
+.wrapper {
 	min-height: 100%;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-}*/
+}
+
+[class*="__container"]{
+   max-width: 1390px;
+   width: 100%;
+   padding: 0 15px;
+   margin: 0 auto;
+}
 
 /*=======================*/
 .title {
@@ -59,6 +66,7 @@ button {
 .title-wrapper {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 84px;
 }
 .title_purple {
 	
@@ -71,26 +79,12 @@ button {
 /*=======================*/
 .page {
 	flex: 1 1 auto;
+	background: linear-gradient(336.61deg, #251928 16.25%, rgba(37, 25, 40, 0) 91.6%);
 }
 
-[class*="__container"]{
-	max-width: 1390px;
-  	width: 100%;
-  	padding: 0 15px;
-  	margin: 0 auto;
-}
-@media(max-width:1199.98px){
-	[class*="__container"]{
-		max-width: 970px;
-	}
-}
-@media(max-width:991.98px){
-	[class*="__container"]{
-		max-width: 750px;
-	}
-}
-@media(max-width:767.98px){
-	[class*="__container"]{
-		max-width: none;
-	}
+
+/*=======================*/
+.swiper {
+	padding-top: 100px !important;
+	overflow: visible !important;
 }

@@ -217,21 +217,19 @@
 .swiper-button-next {
   position: absolute;
   top: 0;
-  transform: translateY(-50%);
   width: 54px;
   height: 54px;
+  overflow: hidden;
   z-index: 10;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
-	transform: scale(5);
 
-	img {
-		width: 54px;
-		height: 54px;
-	}
+  img {
+	transform: scale(5);
+  }
 
   @media($media_sm) {
     width: 15px;
@@ -266,10 +264,10 @@
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  right: 50px;
+  right: 100px;
 
   img {
-	transform: rotate(180deg);
+	transform: scale(5) rotate(180deg);
   }
 
   @media($media_xxxl) {

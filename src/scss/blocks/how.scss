@@ -1,0 +1,66 @@
+.how {
+	background: $black;
+	padding-top: 185px;
+}
+
+.how__title {
+	font-family: 'Oxanium';
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 203%;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.how__icon {
+	background: #372839;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 106px;
+	height: 106px;
+	margin-bottom: 32px;
+	position: relative;
+	img {
+		transform: scale(3);
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: -50%;
+		transform: translateY(-50%) translateX(100%);
+		background: url('../img/how-elem.svg') no-repeat;
+		background-size: cover;
+		width: 160px;
+		height: 10px;
+	}
+}
+
+.how__title_yellow {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 116%;
+	text-transform: capitalize;
+	color: $yellow
+}
+
+.how__items {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.how__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&:last-child {
+		.how__icon {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}

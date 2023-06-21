@@ -719,12 +719,20 @@ button {
   color: #F5FBF2;
 }
 
-/*.wrapper {
-	min-height: 100%;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-}*/
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+[class*=__container] {
+  max-width: 1390px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 /*=======================*/
 .title {
   font-family: "Oxanium";
@@ -754,6 +762,7 @@ button {
 .title-wrapper {
   display: flex;
   justify-content: center;
+  margin-bottom: 84px;
 }
 
 @media (max-width: 767.98px) {
@@ -764,30 +773,15 @@ button {
 /*=======================*/
 .page {
   flex: 1 1 auto;
+  background: linear-gradient(336.61deg, #251928 16.25%, rgba(37, 25, 40, 0) 91.6%);
 }
 
-[class*=__container] {
-  max-width: 1390px;
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
+/*=======================*/
+.swiper {
+  padding-top: 100px !important;
+  overflow: visible !important;
 }
 
-@media (max-width: 1199.98px) {
-  [class*=__container] {
-    max-width: 970px;
-  }
-}
-@media (max-width: 991.98px) {
-  [class*=__container] {
-    max-width: 750px;
-  }
-}
-@media (max-width: 767.98px) {
-  [class*=__container] {
-    max-width: none;
-  }
-}
 /**
  * Swiper 7.0.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1005,21 +999,19 @@ button {
 .swiper-button-next {
   position: absolute;
   top: 0;
-  transform: translateY(-50%);
   width: 54px;
   height: 54px;
+  overflow: hidden;
   z-index: 10;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
-  transform: scale(5);
 }
 .swiper-button-prev img,
 .swiper-button-next img {
-  width: 54px;
-  height: 54px;
+  transform: scale(5);
 }
 @media (max-width: 600px) {
   .swiper-button-prev,
@@ -1057,11 +1049,11 @@ button {
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  right: 50px;
+  right: 100px;
 }
 .swiper-button-prev img,
 .swiper-rtl .swiper-button-next img {
-  transform: rotate(180deg);
+  transform: scale(5) rotate(180deg);
 }
 @media (max-width: 1400px) {
   .swiper-button-prev,
@@ -2762,12 +2754,8 @@ button.swiper-pagination-bullet {
   margin: 250px 0px 185px 0px;
 }
 
-/*.auctions-slider {
-	flex: 0 1 50%;
-	min-width: 0;
-}*/
-.auctions-slider {
-  margin-top: 116px;
+.auctions {
+  padding-bottom: 80px;
 }
 
 .auctions__img {
@@ -2884,4 +2872,83 @@ button.swiper-pagination-bullet {
 .item-auctions__btn:hover {
   background: #FFCE4E;
   color: #000000;
+}
+
+.auctions__btn {
+  margin: 84px auto 0;
+  padding: 24px 64px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 116%;
+  letter-spacing: 0.05em;
+  border: 1px solid #FFCE4E;
+  display: block;
+  background: linear-gradient(336.61deg, #251928 16.25%, rgba(37, 25, 40, 0) 91.6%);
+}
+.auctions__btn:hover {
+  background: #FFCE4E;
+  color: #000000;
+}
+
+.how {
+  background: #1C121F;
+  padding-top: 185px;
+}
+
+.how__title {
+  font-family: "Oxanium";
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 203%;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.how__icon {
+  background: #372839;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 106px;
+  height: 106px;
+  margin-bottom: 32px;
+  position: relative;
+}
+.how__icon img {
+  transform: scale(3);
+}
+.how__icon:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  transform: translateY(-50%) translateX(100%);
+  background: url("../img/how-elem.svg") no-repeat;
+  background-size: cover;
+  width: 160px;
+  height: 10px;
+}
+
+.how__title_yellow {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 116%;
+  text-transform: capitalize;
+  color: #FFCE4E;
+}
+
+.how__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.how__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.how__item:last-child .how__icon:after {
+  display: none;
 }
