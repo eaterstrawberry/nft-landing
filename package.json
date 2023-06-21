@@ -4,13 +4,14 @@
   "description": "",
   "main": "gulpfile.js",
   "type": "module",
-  "homepage": "https://eaterstrawberry.github.io/",
+  "homepage": "https://eaterstrawberry.github.io/nft-landing",
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
     "svgSprive": "gulp svgSprive",
     "zip": "gulp deployZIP --build",
-    "deploy": "gulp deployFTP --build"
+    "deploy": "gulp deployFTP --build",
+	 "redeploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
