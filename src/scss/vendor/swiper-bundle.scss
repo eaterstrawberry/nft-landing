@@ -228,7 +228,7 @@
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
 
   img {
-	transform: scale(5);
+	height: 54px;
   }
 
   @media($media_sm) {
@@ -267,7 +267,8 @@
   right: 100px;
 
   img {
-	transform: scale(5) rotate(180deg);
+	transform: rotate(180deg);
+	height: 54px;
   }
 
   @media($media_xxxl) {

@@ -52,7 +52,6 @@ button {
 		top: 50%;
 		left: 0;
 		transform: translateY(-50%) translateX(-35%);
-		background: $purple;
 		width: 110px;
 		height: 110px;
 		border-radius: 50%;
@@ -61,6 +60,16 @@ button {
 		text-align: center;
 		position: relative;
 		z-index: 2;
+	}
+	&_purple {
+		&:after {
+			background: $purple;
+		}
+	}
+	&_red {
+		&:after {
+			background: $red;
+		}
 	}
 }
 .title-wrapper {
@@ -79,7 +88,7 @@ button {
 /*=======================*/
 .page {
 	flex: 1 1 auto;
-	background: linear-gradient(336.61deg, #251928 16.25%, rgba(37, 25, 40, 0) 91.6%);
+	//background: linear-gradient(336.61deg, #251928 16.25%, rgba(37, 25, 40, 0) 91.6%);
 }
 
 
