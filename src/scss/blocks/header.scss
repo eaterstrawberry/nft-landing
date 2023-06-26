@@ -8,6 +8,10 @@
 	justify-content: space-between;
 	position: relative;
 	z-index: 2;
+	img {
+		width: 66px;
+		height: 66px;
+	}
 }
 .header__menu {
 	display: flex;
