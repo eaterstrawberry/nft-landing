@@ -60,10 +60,19 @@
 .profile-auctions__likes {
 	display: flex;
 	align-items: center;
-	img {
-		width: 25px;
-		transform: scale(5);
+	a {
+		transition: all 0.3s ease;
+		svg {
+			width: 24px;
+			height: 22px;
+		}
 	}
+	a:hover {
+		path {
+			fill: #F7D7FF;
+		}
+	}
+	
 	span {
 		font-weight: 400;
 		font-size: 32px;
@@ -119,9 +128,9 @@
 	border: 1px solid #FDE8B3;
 	width: 100%;
 	margin-top: 40px;
+	transition: all 0.3s ease 0s;
 	&:hover {
-		background: $yellow;
-		color: $black2;
+		background: darken(rgba(233, 215, 167, 0.1), 60);
 	}
 }
 
@@ -135,8 +144,9 @@
 	border: 1px solid $yellow;
 	display: block;
 	background: $black;
+	transition: all 0.3s ease 0s;
 	&:hover {
-		background: $yellow;
 		color: $black2;
+		background: $yellow;
 	}
 }

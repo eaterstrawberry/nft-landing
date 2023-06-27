@@ -47,6 +47,7 @@
 	background: #E7B226;
 	min-height: 100%;
 	padding: 32px 0px;
+	transition: all 0.3s ease 0s;
 	&:hover {
 		color: $white;
 		background: $black;

@@ -39,6 +39,11 @@
 			z-index: 2;
 			white-space: nowrap;
 			transition: all .3s;
+			&:hover {
+				-webkit-box-shadow: 0px 0px 15px 5px rgba(253, 211, 7, 0.35);
+				-moz-box-shadow: 0px 0px 15px 5px rgba(253, 211, 7, 0.35);
+				box-shadow: 0px 0px 15px 5px rgba(253, 211, 7, 0.35);
+			}
 		}
 	}
 	.auctions__btn {

@@ -37,9 +37,11 @@
 .content-main-first__btn {
 	background: rgba(233, 215, 167, 0.1);
 	color: $white;
+	transition: all 0.3s ease 0s;
 	&:hover {
-		background: $yellow;
-		color: $black2;
+		-webkit-box-shadow: 0px 0px 15px 5px rgba(253, 211, 7, 0.35);
+		-moz-box-shadow: 0px 0px 15px 5px rgba(253, 211, 7, 0.35);
+		box-shadow: 0px 0px 15px 5px rgba(253, 211, 7, 0.35);
 	}
 }
 .content-main-first__btn,
@@ -54,9 +56,10 @@
 .content-main-first__btn_yellow {
 	background: $yellow;
 	color: $black2;
+	transition: all 0.3s ease 0s;
 	&:hover {
-		background: rgba(233, 215, 167, 0.1);
 		color: $white;
+		background: $black;
 	}
 }
 
@@ -141,9 +144,10 @@
 	line-height: 116%;
 	color: $black2;
 	padding: 23px 44px;
+	transition: all 0.3s ease 0s;
 	&:hover {
 		color: $white;
-		background: rgba(233, 115, 51, 0.924);
+		background: $black;
 	}
 }
 
@@ -175,9 +179,9 @@
 	border-radius: 50%;
 	width: 156px;
 	height: 156px;
-	
-	
-	img {
-		//width: 20px;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		background: darken(rgba(109, 91, 114, 0.4), 20);
 	}
+
 }

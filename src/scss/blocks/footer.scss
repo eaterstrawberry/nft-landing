@@ -66,23 +66,9 @@
 	line-height: 250%;
 	color: #96839B;
 	position: relative;
+	transition: all 0.2s ease 0s;
+	
 	&:hover {
 		color: $yellow;
-
-		&:after {
-			display: block;
-		}
 	}
-	
-	&:after {
-		content: "";
-		display: none;
-		background: $yellow;
-		height: 2px;
-		width: 100%;
-		position: absolute;
-		bottom: -8px;
-		left: 50%;
-		transform: translateX(-50%);
-	}	
 }
