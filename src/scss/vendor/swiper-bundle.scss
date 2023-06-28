@@ -229,6 +229,9 @@
 
   img {
 	height: 54px;
+	@media (max-width: 600px) {
+		display: none;
+	}
   }
 
   @media($media_sm) {
@@ -269,10 +272,13 @@
   img {
 	transform: rotate(180deg);
 	height: 54px;
+	@media (max-width: 600px) {
+		display: none;
+	}
   }
 
   @media($media_xxxl) {
-    left: 0;
+    //left: 0;
   }
 }
 

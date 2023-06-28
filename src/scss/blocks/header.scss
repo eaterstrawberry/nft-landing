@@ -1,5 +1,8 @@
 .header {
 	margin-bottom: 140px;
+	@media (max-width: 479.98px) {
+		margin-bottom: 80px;
+	}
 }
 
 .header__main {
@@ -8,21 +11,45 @@
 	justify-content: space-between;
 	position: relative;
 	z-index: 2;
+}
+
+.header__logo {
+	width: 66px;
+	height: 66px;
+}
+
+.header__burger {
+	display: none;
+	background: $black;
 	img {
-		width: 66px;
-		height: 66px;
+		width: 40px;
+	}
+
+	@media (max-width: 767.98px) {
+		display: block;
 	}
 }
+
+.header__burger_close {
+	display: none;
+}
+
 .header__menu {
 	display: flex;
 	align-items: center;
+	@media (max-width: 767.98px) {
+		display: none;
+	}
 }
 .menu__list {
 	display: flex;
 	align-items: center;
 	margin: 0px 160px 0px 0px;
 	gap: 60px;
-	
+	@media(max-width: 900px) {
+		margin-right: 35px;
+		gap: 30px;
+	}
 }
 
 .menu__link {

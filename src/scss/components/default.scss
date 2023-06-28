@@ -71,7 +71,11 @@ button {
 			background: $red;
 		}
 	}
+	
 	@media (max-width: 767.98px){
+		font-size: 46px;
+	}
+	@media (max-width: 479.98px){
 		font-size: 30px;
 	}
 }
