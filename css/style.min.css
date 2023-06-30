@@ -760,8 +760,20 @@ button {
 .title_purple:after {
   background: #8613A5;
 }
+@media (max-width: 479.98px) {
+  .title_purple:after {
+    width: 84px;
+    height: 84px;
+  }
+}
 .title_red:after {
   background: #E03054;
+}
+@media (max-width: 479.98px) {
+  .title_red:after {
+    width: 84px;
+    height: 84px;
+  }
 }
 @media (max-width: 767.98px) {
   .title {
@@ -770,7 +782,7 @@ button {
 }
 @media (max-width: 479.98px) {
   .title {
-    font-size: 30px;
+    font-size: 36px;
   }
 }
 
@@ -778,6 +790,11 @@ button {
   display: flex;
   justify-content: center;
   margin-bottom: 84px;
+}
+@media (max-width: 479.98px) {
+  .title-wrapper {
+    margin-bottom: 64px;
+  }
 }
 
 /*=======================*/
@@ -789,6 +806,18 @@ button {
 .swiper {
   padding-top: 100px !important;
   overflow: visible !important;
+}
+@media (max-width: 650px) {
+  .swiper {
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
 }
 
 /**
@@ -1023,12 +1052,6 @@ button {
   height: 54px;
 }
 @media (max-width: 600px) {
-  .swiper-button-prev img,
-  .swiper-button-next img {
-    display: none;
-  }
-}
-@media (max-width: 600px) {
   .swiper-button-prev,
   .swiper-button-next {
     width: 15px;
@@ -1070,12 +1093,6 @@ button {
 .swiper-rtl .swiper-button-next img {
   transform: rotate(180deg);
   height: 54px;
-}
-@media (max-width: 600px) {
-  .swiper-button-prev img,
-  .swiper-rtl .swiper-button-next img {
-    display: none;
-  }
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
@@ -2935,9 +2952,6 @@ button.swiper-pagination-bullet {
 .auctions {
   padding-bottom: 80px;
 }
-.auctions .title-wrapper {
-  margin-bottom: 42px;
-}
 
 .auctions__img {
   position: relative;
@@ -2965,10 +2979,34 @@ button.swiper-pagination-bullet {
   line-height: 146%;
   letter-spacing: 0.02em;
 }
+@media (max-width: 1300px) {
+  .auctions__img div {
+    font-size: 18px;
+    padding: 10px 25px;
+  }
+}
 
 .auctions__item {
   background: #3D2942;
   padding: 32px;
+}
+@media (max-width: 750px) {
+  .auctions__item {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .auctions-slide {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .swiper-wrapper {
+    flex-direction: column;
+    gap: 45px;
+  }
 }
 
 .profile-auctions {
@@ -2989,6 +3027,13 @@ button.swiper-pagination-bullet {
   margin-right: 16px;
   width: 64px;
   height: 64px;
+}
+@media (max-width: 350px) {
+  .info-profile img {
+    width: 45px;
+    height: 45px;
+    margin-right: 12px;
+  }
 }
 
 .profile-auctions__likes {
@@ -3012,6 +3057,16 @@ button.swiper-pagination-bullet {
   color: #76607A;
   margin-left: 9px;
 }
+@media (max-width: 750px) {
+  .profile-auctions__likes a svg {
+    width: 20px;
+    height: 18px;
+  }
+  .profile-auctions__likes span {
+    font-size: 24px;
+    margin-left: 5px;
+  }
+}
 
 .profile-auctions__title {
   font-weight: 500;
@@ -3019,12 +3074,32 @@ button.swiper-pagination-bullet {
   line-height: 125%;
   color: #F5FBF2;
 }
+@media (max-width: 1300px) {
+  .profile-auctions__title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 350px) {
+  .profile-auctions__title {
+    font-size: 18px;
+  }
+}
 
 .profile-auctions__nick {
   font-weight: 400;
   font-size: 20px;
   line-height: 125%;
   color: #BDAAC1;
+}
+@media (max-width: 1300px) {
+  .profile-auctions__nick {
+    font-size: 18px;
+  }
+}
+@media (max-width: 350px) {
+  .profile-auctions__nick {
+    font-size: 14px;
+  }
 }
 
 .profile-auctions__bid {
@@ -3038,12 +3113,22 @@ button.swiper-pagination-bullet {
   line-height: 146%;
   color: #C6BFC8;
 }
+@media (max-width: 750px) {
+  .bid__subtitle {
+    font-size: 20px;
+  }
+}
 
 .bid__price {
   font-family: "Oxanium";
   font-weight: 700;
   font-size: 24px;
   line-height: 146%;
+}
+@media (max-width: 750px) {
+  .bid__price {
+    font-size: 20px;
+  }
 }
 
 .item-auctions__btn {
@@ -3084,6 +3169,11 @@ button.swiper-pagination-bullet {
 .how {
   padding-top: 185px;
 }
+@media (max-width: 700px) {
+  .how {
+    padding-top: 140px;
+  }
+}
 
 .how__title {
   font-family: "Oxanium";
@@ -3092,6 +3182,56 @@ button.swiper-pagination-bullet {
   line-height: 203%;
   margin-bottom: 25px;
   text-align: center;
+}
+@media (max-width: 700px) {
+  .how__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 550px) {
+  .how__title {
+    margin-bottom: 50px;
+  }
+}
+
+.how__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1100px) {
+  .how__items {
+    flex-wrap: wrap;
+    gap: 50px 0px;
+  }
+}
+@media (max-width: 550px) {
+  .how__items {
+    flex-direction: column;
+    gap: 128px 0px;
+  }
+}
+
+.how__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.how__item:last-child .how__icon:after {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .how__item {
+    flex-basis: 49%;
+  }
+  .how__item:nth-child(2) .how__icon:after {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  .how__item:nth-child(2) .how__icon:after {
+    display: block;
+  }
 }
 
 .how__icon {
@@ -3115,9 +3255,23 @@ button.swiper-pagination-bullet {
   right: -50%;
   transform: translateY(-50%) translateX(100%);
   background: url("../img/how-elem.svg") no-repeat;
-  background-size: cover;
-  width: 160px;
+  background-size: contain;
+  width: 165px;
   height: 10px;
+}
+@media (max-width: 1300px) {
+  .how__icon:after {
+    right: -30%;
+    width: 100px;
+  }
+}
+@media (max-width: 550px) {
+  .how__icon:after {
+    top: 100%;
+    height: 80px;
+    width: 80px;
+    transform: translateX(-100%) translateY(100%) rotate(90deg);
+  }
 }
 
 .how__title_yellow {
@@ -3127,20 +3281,10 @@ button.swiper-pagination-bullet {
   text-transform: capitalize;
   color: #FFCE4E;
 }
-
-.how__items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.how__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.how__item:last-child .how__icon:after {
-  display: none;
+@media (max-width: 700px) {
+  .how__title_yellow {
+    font-size: 20px;
+  }
 }
 
 .popular {
