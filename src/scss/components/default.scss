@@ -64,11 +64,19 @@ button {
 	&_purple {
 		&:after {
 			background: $purple;
+			@media (max-width: 479.98px){
+				width: 84px;
+				height: 84px;
+			}
 		}
 	}
 	&_red {
 		&:after {
 			background: $red;
+			@media (max-width: 479.98px){
+				width: 84px;
+				height: 84px;
+			}
 		}
 	}
 	
@@ -76,13 +84,16 @@ button {
 		font-size: 46px;
 	}
 	@media (max-width: 479.98px){
-		font-size: 30px;
+		font-size: 36px;
 	}
 }
 .title-wrapper {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 84px;
+	@media (max-width: 479.98px) {
+		margin-bottom: 64px;
+	}
 }
 .title_purple {
 	
@@ -99,4 +110,15 @@ button {
 .swiper {
 	padding-top: 100px !important;
 	overflow: visible !important;
+
+	@media (max-width: 650px) {
+		padding-top: 0 !important;
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	@media (max-width: 650px) {
+		display: none !important;
+	}
 }

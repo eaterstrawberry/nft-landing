@@ -1,8 +1,5 @@
 .auctions {
 	padding-bottom: 80px;
-	.title-wrapper {
-		margin-bottom: 42px;
-	}
 }
 
 .auctions__img {
@@ -29,12 +26,34 @@
 		font-size: 24px;
 		line-height: 146%;
 		letter-spacing: 0.02em;
+
+		@media(max-width: 1300px) {
+			font-size: 18px;
+			padding: 10px 25px;
+		}
 	}
 }
 
 .auctions__item {
 	background: #3D2942;
 	padding: 32px;
+
+	@media(max-width: 750px) {
+		padding: 20px;
+	}
+}
+
+.auctions-slide {
+	@media(max-width: 650px) {
+		display: none;
+	}
+}
+
+.swiper-wrapper {
+	@media(max-width: 650px) {
+		flex-direction: column;
+		gap: 45px;
+	}
 }
 
 .profile-auctions {
@@ -54,6 +73,12 @@
 		margin-right: 16px;
 		width: 64px;
 		height: 64px;
+
+		@media(max-width: 350px) {
+			width: 45px;
+			height: 45px;
+			margin-right: 12px;
+		}
 	}
 }
 
@@ -80,6 +105,19 @@
 		color: #76607A;
 		margin-left: 9px;
 	}
+
+	@media(max-width: 750px) {
+		a {
+			svg{
+				width: 20px;
+				height: 18px;
+			}
+		}
+		span {
+			font-size: 24px;
+			margin-left: 5px;
+		}
+	}
 }
 
 .profile-auctions__title {
@@ -87,6 +125,13 @@
 	font-size: 28px;
 	line-height: 125%;
 	color: $white2;
+
+	@media(max-width: 1300px) {
+		font-size: 22px;
+	}
+	@media(max-width: 350px) {
+		font-size: 18px;
+	}
 }
 
 .profile-auctions__nick {
@@ -95,6 +140,12 @@
 	line-height: 125%;
 	color: #BDAAC1;
 	//margin-top: 8px;
+	@media(max-width: 1300px) {
+		font-size: 18px;
+	}
+	@media(max-width: 350px) {
+		font-size: 14px;
+	}
 }
 
 .profile-auctions__bid {
@@ -107,6 +158,10 @@
 	font-size: 24px;
 	line-height: 146%;
 	color: #C6BFC8;
+
+	@media(max-width: 750px) {
+		font-size: 20px;
+	}
 }
 
 .bid__price {
@@ -114,6 +169,10 @@
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 146%;
+
+	@media(max-width: 750px) {
+		font-size: 20px;
+	}
 }
 
 .item-auctions__btn {

@@ -15,7 +15,7 @@ import AOS from 'aos';
 
 flsFunctions.isWebp();
 
-const swiper = new Swiper('.auctions-slider', {
+/*new Swiper('.auctions-slider', {
 	navigation: {
 		nextEl: '.swiper-button-next_1',
 		prevEl: '.swiper-button-prev_1' // Включить стрелочки
@@ -23,11 +23,61 @@ const swiper = new Swiper('.auctions-slider', {
 	modules: [Navigation, FreeMode], // Модули, которые будут использоваться
 	autoHeight: true, // Автовысота
 	speed: 500, // Скорость прокрутки слайдера
-	slidesPerView: 3, // Количество слайдов, которые будут видны
-	spaceBetween: 42,
+	slidesPerView: 1, // Количество слайдов, которые будут видны
+	spaceBetween: 15,
 	freeMode: true,
 	grabCursor: true,
-});
+	breakpoints: {
+		1300: {
+			spaceBetween: 42
+		},
+		1150: {
+			slidesPerView: 3
+		},
+		600: {
+			slidesPerView: 2
+		}
+	}
+});*/
+
+const swiper = () => {
+	new Swiper('.auctions-slider', {
+		navigation: {
+			nextEl: '.swiper-button-next_1',
+			prevEl: '.swiper-button-prev_1' // Включить стрелочки
+		},
+		modules: [Navigation, FreeMode], // Модули, которые будут использоваться
+		autoHeight: true, // Автовысота
+		speed: 500, // Скорость прокрутки слайдера
+		slidesPerView: 3, // Количество слайдов, которые будут видны
+		spaceBetween: 15,
+		freeMode: true,
+		grabCursor: true,
+		breakpoints: {
+			1300: {
+				spaceBetween: 42
+			},
+			1150: {
+				slidesPerView: 3
+			},
+			650: {
+				slidesPerView: 2
+			}
+		}
+	});
+}
+
+function detectDevice(swiper) {
+	if (window.innerWidth < 650) {
+		for (let i = 0; i <= 2; i++) {
+			document.querySelectorAll('.auctions-slide')[i].style.display = 'block';
+		}
+	} else {
+		swiper();
+	}
+}
+
+detectDevice(swiper);
 
 const swiper2 = new Swiper('.popular-slider', {
 	navigation: {
