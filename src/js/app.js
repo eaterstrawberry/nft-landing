@@ -71,28 +71,41 @@ function detectDevice(swiper) {
 	if (window.innerWidth < 650) {
 		for (let i = 0; i <= 2; i++) {
 			document.querySelectorAll('.auctions-slide')[i].style.display = 'block';
+			document.querySelectorAll('.popular-slide')[i].style.display = 'block';
 		}
 	} else {
 		swiper();
 	}
 }
 
-detectDevice(swiper);
-
-const swiper2 = new Swiper('.popular-slider', {
-	navigation: {
-		nextEl: '.swiper-button-next_2',
-		prevEl: '.swiper-button-prev_2' // Включить стрелочки
-	},
-	modules: [Navigation, FreeMode], // Модули, которые будут использоваться
-	autoHeight: true, // Автовысота
-	speed: 500, // Скорость прокрутки слайдера
-	slidesPerView: 2.5, // Количество слайдов, которые будут видны
-	spaceBetween: 42,
-	freeMode: true,
-	grabCursor: true,
-});
-
+const swiper2 = () => {
+	new Swiper('.popular-slider', {
+		navigation: {
+			nextEl: '.swiper-button-next_2',
+			prevEl: '.swiper-button-prev_2' // Включить стрелочки
+		},
+		modules: [Navigation, FreeMode], // Модули, которые будут использоваться
+		autoHeight: true, // Автовысота
+		speed: 500, // Скорость прокрутки слайдера
+		slidesPerView: 2.5, // Количество слайдов, которые будут видны
+			spaceBetween: 15,
+			freeMode: true,
+			grabCursor: true,
+			breakpoints: {
+				1300: {
+					spaceBetween: 42
+				},
+				1150: {
+					slidesPerView: 2.5
+				},
+				650: {
+					slidesPerView: 2
+				}
+			}
+		}	
+	);
+}
+	
 const swiper3 = new Swiper('.categories-slider', {
 	navigation: {
 		nextEl: '.swiper-button-next_3',
@@ -106,6 +119,9 @@ const swiper3 = new Swiper('.categories-slider', {
 	freeMode: true,
 	grabCursor: true,
 });
+
+detectDevice(swiper);
+detectDevice(swiper2);
 
 AOS.init({
 	// Global settings:
