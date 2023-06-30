@@ -780,7 +780,7 @@ button {
     font-size: 46px;
   }
 }
-@media (max-width: 479.98px) {
+@media (max-width: 600px) {
   .title {
     font-size: 36px;
   }
@@ -2990,7 +2990,7 @@ button.swiper-pagination-bullet {
   background: #3D2942;
   padding: 32px;
 }
-@media (max-width: 750px) {
+@media (max-width: 900px) {
   .auctions__item {
     padding: 20px;
   }
@@ -3030,8 +3030,8 @@ button.swiper-pagination-bullet {
 }
 @media (max-width: 350px) {
   .info-profile img {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     margin-right: 12px;
   }
 }
@@ -3290,8 +3290,38 @@ button.swiper-pagination-bullet {
 .popular {
   margin-top: 174px;
 }
+@media (max-width: 479.98px) {
+  .popular {
+    margin-top: 92px;
+  }
+}
+@media (max-width: 425px) {
+  .popular .title_red {
+    font-size: 28px;
+  }
+}
 .popular .auctions__img img {
   max-height: 272px;
+}
+@media (max-width: 600px) {
+  .popular .auctions__img:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .popular .auctions__img:hover:after {
+    opacity: 1;
+  }
+  .popular .auctions__img:hover button {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 .popular .auctions__btn {
   background: #1C121F;
@@ -3299,10 +3329,21 @@ button.swiper-pagination-bullet {
 .popular .auctions__btn:hover {
   background: #FFCE4E;
 }
+@media (max-width: 900px) {
+  .popular .info-profile img {
+    width: 50px;
+    height: 50px;
+  }
+}
 .popular .profile-auctions__nick {
   font-weight: 500;
   font-size: 32px;
   line-height: 112%;
+}
+@media (max-width: 900px) {
+  .popular .profile-auctions__nick {
+    font-size: 20px;
+  }
 }
 .popular .profile-auctions__likes span {
   font-weight: 600;
@@ -3310,11 +3351,21 @@ button.swiper-pagination-bullet {
   line-height: 175%;
   color: #C2B5C6;
 }
+@media (max-width: 900px) {
+  .popular .profile-auctions__likes span {
+    font-size: 16px;
+  }
+}
 .popular .swiper-slide {
   transition: all 0.3s ease;
 }
 .popular .swiper-slide-next + .swiper-slide {
   opacity: 0.4;
+}
+@media (max-width: 1150px) {
+  .popular .swiper-slide-active + .swiper-slide-next {
+    opacity: 0.4;
+  }
 }
 .popular .profile-auctions {
   margin-bottom: 0;
