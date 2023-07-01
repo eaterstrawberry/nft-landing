@@ -208,4 +208,12 @@
 		color: $black2;
 		background: $yellow;
 	}
+
+	@media(max-width: 500px) {
+		padding: 13px 58px;
+		margin: 48px auto 0;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 194%;
+	}
 }
