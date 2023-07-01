@@ -3165,6 +3165,15 @@ button.swiper-pagination-bullet {
   color: #000000;
   background: #FFCE4E;
 }
+@media (max-width: 500px) {
+  .auctions__btn {
+    padding: 13px 58px;
+    margin: 48px auto 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 194%;
+  }
+}
 
 .how {
   padding-top: 185px;
@@ -3402,7 +3411,7 @@ button.swiper-pagination-bullet {
 }
 
 .categories {
-  margin: 105px 0px 0px 0px;
+  margin: 105px 0;
 }
 @media (max-width: 375px) {
   .categories .title_purple {
@@ -3465,6 +3474,17 @@ button.swiper-pagination-bullet {
   grid-template-rows: 1fr 1fr;
   grid-gap: 56px 72px;
 }
+@media (max-width: 1150px) {
+  .creators__main {
+    grid-gap: 40px 20px;
+  }
+}
+@media (max-width: 650px) {
+  .creators__main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
 
 .item-creators {
   display: flex;
@@ -3480,6 +3500,23 @@ button.swiper-pagination-bullet {
   overflow: hidden;
   margin-right: 24px;
 }
+@media (max-width: 1100px) {
+  .item-creators {
+    padding: 20px;
+  }
+  .item-creators img {
+    max-width: 65px;
+  }
+}
+@media (max-width: 767.98px) {
+  .item-creators {
+    padding: 15px;
+  }
+  .item-creators img {
+    max-width: 50px;
+    margin-right: 10px;
+  }
+}
 
 .item-creators__content {
   display: flex;
@@ -3490,8 +3527,23 @@ button.swiper-pagination-bullet {
   font-family: "Oxanium";
   font-weight: 600;
   font-size: 32px;
-  line-height: 109%;
+  line-height: 150%;
   letter-spacing: 0.05em;
+}
+@media (max-width: 1100px) {
+  .info-creators__name {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .info-creators__name {
+    font-size: 20px;
+  }
+}
+@media (max-width: 320px) {
+  .info-creators__name {
+    font-size: 18px;
+  }
 }
 
 .info-creators__price {
@@ -3500,6 +3552,17 @@ button.swiper-pagination-bullet {
   line-height: 150%;
   color: #BDAAC1;
   margin-top: 8px;
+}
+@media (max-width: 1100px) {
+  .info-creators__price {
+    font-size: 18px;
+    margin-top: 0;
+  }
+}
+@media (max-width: 320px) {
+  .info-creators__price {
+    font-size: 16px;
+  }
 }
 
 .count-creators {
@@ -3515,6 +3578,11 @@ button.swiper-pagination-bullet {
   width: 3px;
   background: #49374E;
 }
+@media (max-width: 900px) {
+  .count-creators:before {
+    left: -20px;
+  }
+}
 
 .count-creators__number {
   font-family: "Oxanium";
@@ -3524,12 +3592,33 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.05em;
   margin-bottom: 6px;
 }
+@media (max-width: 1100px) {
+  .count-creators__number {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 320px) {
+  .count-creators__number {
+    font-size: 20px;
+  }
+}
 
 .count-creators__items {
   font-weight: 500;
   font-size: 24px;
   line-height: 150%;
   color: #908294;
+}
+@media (max-width: 1100px) {
+  .count-creators__items {
+    font-size: 20px;
+  }
+}
+@media (max-width: 320px) {
+  .count-creators__items {
+    font-size: 18px;
+  }
 }
 
 .subscribe {
@@ -3543,8 +3632,19 @@ button.swiper-pagination-bullet {
   font-family: "Oxanium";
   font-weight: 700;
   font-size: 64px;
-  line-height: 203%;
+  line-height: 130%;
   text-align: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 767.98px) {
+  .subscribe__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 600px) {
+  .subscribe__title {
+    font-size: 30px;
+  }
 }
 
 .subscribe__main div {
@@ -3553,6 +3653,17 @@ button.swiper-pagination-bullet {
   border: 1px solid #E7B226;
   max-width: 680px;
   margin: 0 auto;
+}
+@media (max-width: 750px) {
+  .subscribe__main {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .subscribe__main div {
+    flex-direction: column;
+    border: 0;
+  }
 }
 
 .subscribe__input {
@@ -3563,10 +3674,22 @@ button.swiper-pagination-bullet {
   flex-grow: 1;
   border: 0;
   outline: 0;
-  padding: 30px 15px 30px 53px;
+  padding: 30px 15px 30px 50px;
 }
 .subscribe__input::placeholder {
   color: #A48EA9;
+}
+@media (max-width: 600px) {
+  .subscribe__input {
+    font-size: 18px;
+    padding: 15px 15px 15px 20px;
+  }
+}
+@media (max-width: 450px) {
+  .subscribe__input {
+    border: 1px solid #E7B226;
+    width: 100%;
+  }
 }
 
 .subscribe__btn {
@@ -3577,13 +3700,25 @@ button.swiper-pagination-bullet {
   line-height: 146%;
   color: #251928;
   background: #E7B226;
-  min-height: 100%;
   padding: 32px 0px;
   transition: all 0.3s ease 0s;
 }
 .subscribe__btn:hover {
   color: #fff;
   background: #1C121F;
+}
+@media (max-width: 600px) {
+  .subscribe__btn {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 0;
+  }
+}
+@media (max-width: 450px) {
+  .subscribe__btn {
+    font-size: 24px;
+    margin: 32px auto 0;
+  }
 }
 
 .footer {
