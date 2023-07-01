@@ -15,30 +15,6 @@ import AOS from 'aos';
 
 flsFunctions.isWebp();
 
-/*new Swiper('.auctions-slider', {
-	navigation: {
-		nextEl: '.swiper-button-next_1',
-		prevEl: '.swiper-button-prev_1' // Включить стрелочки
-	},
-	modules: [Navigation, FreeMode], // Модули, которые будут использоваться
-	autoHeight: true, // Автовысота
-	speed: 500, // Скорость прокрутки слайдера
-	slidesPerView: 1, // Количество слайдов, которые будут видны
-	spaceBetween: 15,
-	freeMode: true,
-	grabCursor: true,
-	breakpoints: {
-		1300: {
-			spaceBetween: 42
-		},
-		1150: {
-			slidesPerView: 3
-		},
-		600: {
-			slidesPerView: 2
-		}
-	}
-});*/
 
 const swiper = () => {
 	new Swiper('.auctions-slider', {
@@ -65,17 +41,6 @@ const swiper = () => {
 			}
 		}
 	});
-}
-
-function detectDevice(swiper) {
-	if (window.innerWidth < 650) {
-		for (let i = 0; i <= 2; i++) {
-			document.querySelectorAll('.auctions-slide')[i].style.display = 'block';
-			document.querySelectorAll('.popular-slide')[i].style.display = 'block';
-		}
-	} else {
-		swiper();
-	}
 }
 
 const swiper2 = () => {
@@ -106,22 +71,49 @@ const swiper2 = () => {
 	);
 }
 	
-const swiper3 = new Swiper('.categories-slider', {
-	navigation: {
-		nextEl: '.swiper-button-next_3',
-		prevEl: '.swiper-button-prev_3' // Включить стрелочки
-	},
-	modules: [Navigation, FreeMode], // Модули, которые будут использоваться
-	autoHeight: true, // Автовысота
-	speed: 500, // Скорость прокрутки слайдера
-	slidesPerView: 2.5, // Количество слайдов, которые будут видны
-	spaceBetween: 42,
-	freeMode: true,
-	grabCursor: true,
-});
+const swiper3 = () => {
+	new Swiper('.categories-slider', {
+		navigation: {
+			nextEl: '.swiper-button-next_3',
+			prevEl: '.swiper-button-prev_3' // Включить стрелочки
+		},
+		modules: [Navigation, FreeMode], // Модули, которые будут использоваться
+		autoHeight: true, // Автовысота
+		speed: 500, // Скорость прокрутки слайдера
+		slidesPerView: 2.5, // Количество слайдов, которые будут видны
+		spaceBetween: 15,
+		freeMode: true,
+		grabCursor: true,
+		breakpoints: {
+			1300: {
+				spaceBetween: 42
+			},
+			1150: {
+				slidesPerView: 3
+			},
+			600: {
+				slidesPerView: 2
+			}
+		}
+	});
+} 
 
-detectDevice(swiper);
-detectDevice(swiper2);
+function detectDevice() {
+	if (window.innerWidth < 650) {
+		for (let i = 0; i <= 2; i++) {
+			document.querySelectorAll('.auctions-slide')[i].style.display = 'block';
+			document.querySelectorAll('.popular-slide')[i].style.display = 'block';
+			document.querySelectorAll('.categories-slide')[i].style.display = 'block';
+		}
+	} else {
+		swiper();
+		swiper2();
+		swiper3();
+	}
+}
+
+detectDevice();
+
 
 AOS.init({
 	// Global settings:

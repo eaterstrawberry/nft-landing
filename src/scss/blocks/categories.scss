@@ -1,5 +1,12 @@
 .categories {
 	margin: 105px 0px 0px 0px;
+
+	.title_purple {
+		@media (max-width: 375px) {
+			font-size: 24px;
+		}
+	}
+
 	.auctions__img {
 		&:after {
 			content: '';
