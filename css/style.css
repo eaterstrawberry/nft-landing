@@ -760,7 +760,7 @@ button {
 .title_purple:after {
   background: #8613A5;
 }
-@media (max-width: 479.98px) {
+@media (max-width: 600px) {
   .title_purple:after {
     width: 84px;
     height: 84px;
@@ -769,7 +769,7 @@ button {
 .title_red:after {
   background: #E03054;
 }
-@media (max-width: 479.98px) {
+@media (max-width: 600px) {
   .title_red:after {
     width: 84px;
     height: 84px;
@@ -777,12 +777,12 @@ button {
 }
 @media (max-width: 767.98px) {
   .title {
-    font-size: 46px;
+    font-size: 36px;
   }
 }
 @media (max-width: 600px) {
   .title {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 
@@ -3183,9 +3183,14 @@ button.swiper-pagination-bullet {
   margin-bottom: 25px;
   text-align: center;
 }
-@media (max-width: 700px) {
+@media (max-width: 767.98px) {
   .how__title {
     font-size: 36px;
+  }
+}
+@media (max-width: 600px) {
+  .how__title {
+    font-size: 30px;
   }
 }
 @media (max-width: 550px) {
@@ -3295,15 +3300,15 @@ button.swiper-pagination-bullet {
     margin-top: 92px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 375px) {
   .popular .title_red {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 .popular .auctions__img img {
   max-height: 272px;
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .popular .auctions__img:after {
     content: "";
     position: absolute;
@@ -3316,7 +3321,7 @@ button.swiper-pagination-bullet {
     transition: all 0.3s;
   }
   .popular .auctions__img:hover:after {
-    opacity: 1;
+    opacity: 0.4;
   }
   .popular .auctions__img:hover button {
     opacity: 1;
@@ -3398,6 +3403,11 @@ button.swiper-pagination-bullet {
 
 .categories {
   margin: 105px 0px 0px 0px;
+}
+@media (max-width: 375px) {
+  .categories .title_purple {
+    font-size: 24px;
+  }
 }
 .categories .auctions__img:after {
   content: "";
