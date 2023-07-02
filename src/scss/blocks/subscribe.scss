@@ -3,6 +3,18 @@
 	background: url('../img/subscribe.png') no-repeat;
 	background-size: cover;
 	padding: 117px 0;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: 10%;
+		width: 600px;
+		height: 400px;
+		background: url('../img/subscribe-effect.png') no-repeat;
+		background-size: cover;
+	}
 }
 
 .subscribe__title {

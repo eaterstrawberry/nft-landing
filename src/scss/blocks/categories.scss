@@ -1,6 +1,9 @@
 .categories {
 	margin: 105px 0;
 	
+	background: url('../img/categories-effect.png') 0 -50px no-repeat;
+	background-size: contain;
+	
 	.title_purple {
 		@media (max-width: 375px) {
 			font-size: 24px;

@@ -2,6 +2,10 @@
 	padding: 37px 0px 0px 0px;
 	min-height: 100%;
 	position: relative;
+
+	background: url('../img/bg-effect.png') no-repeat;
+	background-size: 100% 100%;
+
 	.first__container {
 		position: relative;
 		z-index: 2;
@@ -292,7 +296,9 @@
 }
 
 .first__arrow-btn {
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	position: absolute;
 	bottom: 0;
 	left: 50%;

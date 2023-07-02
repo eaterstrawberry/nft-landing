@@ -1,9 +1,13 @@
 .popular {
-	//background: $black;
+	background: url('../img/popular-effect.png') 0 -50px no-repeat;
+	background-size: contain;
 	margin-top: 174px;
+
 	@media(max-width: 479.98px) {
 		margin-top: 92px;
 	}
+
+	
 
 	.title_red {
 		@media (max-width: 375px) {
