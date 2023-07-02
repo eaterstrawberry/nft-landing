@@ -2551,7 +2551,7 @@ button.swiper-pagination-bullet {
 
 .header__burger {
   display: none;
-  background: #1C121F;
+  background: inherit;
 }
 .header__burger img {
   width: 40px;
@@ -2685,6 +2685,8 @@ button.swiper-pagination-bullet {
   padding: 37px 0px 0px 0px;
   min-height: 100%;
   position: relative;
+  background: url("../img/bg-effect.png") no-repeat;
+  background-size: 100% 100%;
 }
 .first .first__container {
   position: relative;
@@ -3006,7 +3008,9 @@ button.swiper-pagination-bullet {
 }
 
 .first__arrow-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -3058,6 +3062,7 @@ button.swiper-pagination-bullet {
 
 .auctions {
   padding-bottom: 80px;
+  background: url("../img/auctions-effect.png") 0 -50px no-repeat;
 }
 
 .auctions__img {
@@ -3284,6 +3289,8 @@ button.swiper-pagination-bullet {
 
 .how {
   padding-top: 185px;
+  background: url("../img/how-effect.png") 50% 0 no-repeat;
+  background-size: contain;
 }
 @media (max-width: 700px) {
   .how {
@@ -3409,6 +3416,8 @@ button.swiper-pagination-bullet {
 }
 
 .popular {
+  background: url("../img/popular-effect.png") 0 -50px no-repeat;
+  background-size: contain;
   margin-top: 174px;
 }
 @media (max-width: 479.98px) {
@@ -3519,6 +3528,8 @@ button.swiper-pagination-bullet {
 
 .categories {
   margin: 105px 0;
+  background: url("../img/categories-effect.png") 0 -50px no-repeat;
+  background-size: contain;
 }
 @media (max-width: 375px) {
   .categories .title_purple {
@@ -3733,6 +3744,17 @@ button.swiper-pagination-bullet {
   background: url("../img/subscribe.png") no-repeat;
   background-size: cover;
   padding: 117px 0;
+  position: relative;
+}
+.subscribe:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 600px;
+  height: 400px;
+  background: url("../img/subscribe-effect.png") no-repeat;
+  background-size: cover;
 }
 
 .subscribe__title {
